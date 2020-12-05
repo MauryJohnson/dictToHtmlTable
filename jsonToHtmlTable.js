@@ -3,7 +3,7 @@
     return "<"+Tag+" style='"+(Style || "")+"'>";
   }
   
-  var jsonToHtmlTable = function(O,T={}){
+  var dictToHtmlTable = function(O,T={}){
     
     //Iterate Object but order by levels
     var Tables = [
