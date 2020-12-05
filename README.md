@@ -54,22 +54,22 @@ jsonToHtmlTable([
         }
       ],
   
-      friends: [
-        {
-          'repeat(3)': {
-            id: '{{index()}}',
-            name: '{{firstName()}} {{surname()}}'
-          }
-        }
-      ],
-      greeting(tags) {
-        return `Hello, ${this.name.first}! You have ${tags.integer(5, 10)} unread messages.`;
-      },
-      favoriteFruit(tags) {
-        const fruits = ['apple', 'banana', 'strawberry'];
-        return fruits[tags.integer(0, fruits.length - 1)];
+  friends: [
+    {
+      'repeat(3)': {
+        id: '{{index()}}',
+        name: '{{firstName()}} {{surname()}}'
       }
     }
+  ],
+  greeting(tags) {
+    return `Hello, ${this.name.first}! You have ${tags.integer(5, 10)} unread messages.`;
+  },
+  favoriteFruit(tags) {
+    const fruits = ['apple', 'banana', 'strawberry'];
+    return fruits[tags.integer(0, fruits.length - 1)];
+  }
+}
   }
 ]) 
 
