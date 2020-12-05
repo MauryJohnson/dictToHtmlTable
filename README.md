@@ -24,7 +24,7 @@ Argument 2 is the td,tr,and table css configurations. Default CSS configurations
   }
   
 jsonToHtmlTable([
-  {
+ {
     'repeat(5, 10)': {
       _id: '{{objectId()}}',
       index: '{{index()}}',
@@ -53,23 +53,22 @@ jsonToHtmlTable([
           'repeat(5)': '{{lorem(1, "words")}}'
         }
       ],
-  
-  friends: [
-    {
-      'repeat(3)': {
-        id: '{{index()}}',
-        name: '{{firstName()}} {{surname()}}'
+      friends: [
+        {
+          'repeat(3)': {
+            id: '{{index()}}',
+            name: '{{firstName()}} {{surname()}}'
+          }
+        }
+      ],
+      greeting(tags) {
+        return `Hello, ${this.name.first}! You have ${tags.integer(5, 10)} unread messages.`;
+      },
+      favoriteFruit(tags) {
+        const fruits = ['apple', 'banana', 'strawberry'];
+        return fruits[tags.integer(0, fruits.length - 1)];
       }
     }
-  ],
-  greeting(tags) {
-    return `Hello, ${this.name.first}! You have ${tags.integer(5, 10)} unread messages.`;
-  },
-  favoriteFruit(tags) {
-    const fruits = ['apple', 'banana', 'strawberry'];
-    return fruits[tags.integer(0, fruits.length - 1)];
-  }
-}
   }
 ]) 
 
