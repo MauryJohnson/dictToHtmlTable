@@ -1,4 +1,4 @@
-# jsonToHtmlTable
+# dictToHtmlTable
 Convert ANY JSON Dictionary to an HTML Table
 Argument 1 is the JSON object.
 Argument 2 is the td,tr,and table css configurations. Default CSS configurations are:
