@@ -1,6 +1,6 @@
 # dictToHtmlTable
-Convert ANY JSON Dictionary to an HTML Table
-Argument 1 is the JSON object.
+Convert ANY Dictionary to an HTML Table
+Argument 1 is the Dictionary object.
 Argument 2 is the td,tr,and table css configurations. Default CSS configurations are:
 
   1. td
@@ -23,7 +23,7 @@ Argument 2 is the td,tr,and table css configurations. Default CSS configurations
 
   }
   
-jsonToHtmlTable([{"repeat(5, 10)":{"_id":"{{objectId()}}","index":"{{index()}}","guid":"{{guid()}}","isActive":"{{bool()}}","balance":"{{floating(1000, 4000, 2, \"$0,0.00\")}}","picture":"http://placehold.it/32x32","age":"{{integer(20, 40)}}","eyeColor":"{{random(\"blue\", \"brown\", \"green\")}}","name":{"first":"{{firstName()}}","last":"{{surname()}}"},"company":"{{company().toUpperCase()}}","phone":"+1 {{phone()}}","address":"{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}","about":"{{lorem(1, \"paragraphs\")}}","registered":"{{moment(this.date(new Date(2014, 0, 1), new Date())).format(\"LLLL\")}}","latitude":"{{floating(-90.000001, 90)}}","longitude":"{{floating(-180.000001, 180)}}","tags":[{"repeat(5)":"{{lorem(1, \"words\")}}"}],"friends":[{"repeat(3)":{"id":"{{index()}}","name":"{{firstName()}} {{surname()}}"}}]}}])
+dictToHtmlTable([{"repeat(5, 10)":{"_id":"{{objectId()}}","index":"{{index()}}","guid":"{{guid()}}","isActive":"{{bool()}}","balance":"{{floating(1000, 4000, 2, \"$0,0.00\")}}","picture":"http://placehold.it/32x32","age":"{{integer(20, 40)}}","eyeColor":"{{random(\"blue\", \"brown\", \"green\")}}","name":{"first":"{{firstName()}}","last":"{{surname()}}"},"company":"{{company().toUpperCase()}}","phone":"+1 {{phone()}}","address":"{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}","about":"{{lorem(1, \"paragraphs\")}}","registered":"{{moment(this.date(new Date(2014, 0, 1), new Date())).format(\"LLLL\")}}","latitude":"{{floating(-90.000001, 90)}}","longitude":"{{floating(-180.000001, 180)}}","tags":[{"repeat(5)":"{{lorem(1, \"words\")}}"}],"friends":[{"repeat(3)":{"id":"{{index()}}","name":"{{firstName()}} {{surname()}}"}}]}}])
 
 =>
 
